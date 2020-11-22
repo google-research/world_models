@@ -1,0 +1,36 @@
+# Copyright 2020 Google LLC
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#      http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+import world_models.agents.sv2p
+
+# Parameters for model:
+sv2p.SV2P.input_length = 2
+sv2p.SV2P.output_length = 12
+sv2p.SV2P.task = %TASK
+sv2p.SV2P.model_dir = %model_dir
+MODEL = @model/singleton()
+model/singleton.constructor = @SV2P
+
+# Parameters for train_fn, observe, reset_fn and predict_fn:
+STRATEGY = @strategy/singleton()
+strategy/singleton.constructor = @tf.distribute.MirroredStrategy
+sv2p.create_train_fn.train_steps = 100
+sv2p.create_train_fn.batch = 64
+sv2p.create_train_fn.model = %MODEL
+sv2p.create_train_fn.strategy = %STRATEGY
+sv2p.create_reset_fn.model = %MODEL
+sv2p.create_observe_fn.model = %MODEL
+sv2p.create_predict_fn.model = %MODEL
+sv2p.create_predict_fn.prediction_horizon = 12
+sv2p.create_predict_fn.strategy = %STRATEGY
