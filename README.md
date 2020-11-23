@@ -2,7 +2,7 @@
 
 World Models is a platform-agnostic library to facilitate visual based 
 agents for planning. This notebook 
-([run it in colab](https://colab.research.google.com/github/google/world_models/blob/master/intro.ipynb))
+([run it in colab](https://colab.research.google.com/github/google_research/world_models/blob/main/intro.ipynb))
 shows how to use World Models library and its different
 components.
 
