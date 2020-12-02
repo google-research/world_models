@@ -24,3 +24,4 @@ python3 -m world_models.bin.train_eval  \
 * dm_control
 * MuJoCo
 
+Disclaimer: This is not an official Google product.
