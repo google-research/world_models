@@ -43,5 +43,5 @@ setuptools.setup(
         "dm_control",
         "mujoco-py==2.0.2.8",
     ],
-    python_requires="<=3.7",
+    python_requires="<3.8",
 )
