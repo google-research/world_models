@@ -15,6 +15,18 @@ python3 -m world_models.bin.train_eval  \
     --logtostderr
 ```
 
+## How to Cite
+If you use this work, please cite the following paper where it was first introduced:
+```   
+   @article{2020worldmodels,
+     title   = {Models, Pixels, and Rewards: Evaluating Design Trade-offs in Visual Model-Based Reinforcement Learning},
+     author  = {Mohammad Babaeizadeh and Mohammad Taghi Saffar and Danijar Hafner and Harini Kannan and Chelsea Finn and Sergey Levine and Dumitru Erhan},
+     year    = {2020},
+     url     = {https://arxiv.org/abs/2012.04603}
+   }
+```
+
+You can reach us at wm-core@google.com 
 ## Dependencies
 * absl
 * gin-config
