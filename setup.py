@@ -49,7 +49,7 @@ setuptools.setup(
         "absl-py",
         "gin-config",
         "numpy",
-        "tensorflow==1.15",
+        "tensorflow==2.11.1",
         "tensorflow-probability==0.7",
         "gym",
         "dm_control",
